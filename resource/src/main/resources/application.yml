@@ -1,0 +1,7 @@
+server.port: 9090
+
+security:
+  oauth2:
+    resource:
+      userInfoUri: http://127.0.0.1:8080/userinfo
+      jwt.keyUri: http://127.0.0.1:8080/oauth/token_key

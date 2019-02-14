@@ -1,0 +1,28 @@
+server:
+  port: 9999
+logging:
+  level:
+    org.springframework.security: DEBUG
+
+spring:
+  aop:
+    proxy-target-class: true
+
+security:
+  oauth2:
+    #    sso:
+    #      home:
+    #        secure: false
+    #        path: /, /public/**,/index
+    #      logout-path: /logout
+    #      logout-redirect: true
+    #      logout-uri: http://127.0.0.1:8080/logout.do
+    #      login-path: /login
+    client:
+      accessTokenUri: http://127.0.0.1:8080/oauth/token
+      userAuthorizationUri: http://127.0.0.1:8080/oauth/authorize
+      clientId: client
+      clientSecret: secret
+    resource:
+      userInfoUri: http://127.0.0.1:8080/userinfo
+      jwt.keyUri: http://127.0.0.1:8080/oauth/token_key
